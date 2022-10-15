@@ -1,7 +1,7 @@
 backend:
   name: github
   repo: flumoh/flumoh.github.io
-  branch: master
+  branch: main
   site_domain: brilliant-fudge-9f6632.netlify.com
 
 media_folder: "images/uploads"
