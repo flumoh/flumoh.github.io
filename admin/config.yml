@@ -34,7 +34,7 @@ collections:
         name: "rarity"
         widget: "select"
         options:
-        - {label: "Common", value: "common"}
+        - {label: "Common", value: "common", widget: "string"}
         - {label: "Uncommon", value: "uncommon"}
         - {label: "Rare", value: "rare"}
         - {label: "Very Rare", value: "very-rare"}
