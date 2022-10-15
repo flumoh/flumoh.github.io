@@ -35,6 +35,7 @@ collections:
     folder: "content/_potions-aa/"
     create: true
     extension: html
+    format: html
     slug: "{{slug}}-aa"
     identifier_field: name
     fields:
