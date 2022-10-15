@@ -19,7 +19,7 @@ collections:
       - {label: "Body", name: "body", widget: "markdown"}
   - name: "potion-aa"
     label: "Alchemy Almanac Potion"
-    folder: "_potions-aa/"
+    folder: "content/_potions-aa/"
     create: true
     slug: "{{slug}}-aa"
     identifier_field: name
