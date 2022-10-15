@@ -24,13 +24,21 @@ collections:
     slug: "{{slug}}-aa"
     identifier_field: name
     fields:
-      - {label: "Name", name: "name", widget: "string"}
-      - {label: "Category", name: "category", widget: "string"}
-      - {label: "Rarity", name: "rarity", widget: "select", options:
+      - label: "Name"
+        name: "name"
+        widget: "string"
+      - label: "Category"
+        name: "category"
+        widget: "string"
+      - label: "Rarity"
+        name: "rarity"
+        widget: "select"
+        options:
         - {label: "Common", value: "common"}
         - {label: "Uncommon", value: "uncommon"}
         - {label: "Rare", value: "rare"}
         - {label: "Very Rare", value: "very-rare"}
         - {label: "Legendary", value: "legendary"}
-        }
-      - {label: "Description", name: "description", widget: "markdown"}
+      - label: "Description"
+        name: "description"
+        widget: "markdown"
