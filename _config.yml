@@ -11,9 +11,11 @@ sass:
 collections:
   posts:
     output          : true
+gist:
+  noscript          : false
 
 # Handling Reading
-safe                : false
+safe                : true
 include             : [".htaccess"]
 exclude             : ["Gemfile", "Gemfile.lock", "node_modules", "vendor/bundle/", "vendor/cache/", "vendor/gems/", "vendor/ruby/"]
 keep_files          : [".git", ".svn"]
@@ -61,6 +63,8 @@ liquid:
 
 # Markdown Processors
 kramdown:
+  math_engine       : mathjax
+  syntax_highlighter: rouge
   auto_ids          : true
   entity_output     : as_char
   toc_levels        : [1, 2, 3, 4, 5, 6]
