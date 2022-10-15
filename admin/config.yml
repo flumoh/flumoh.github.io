@@ -7,7 +7,7 @@ backend:
 publish_mode: editorial_workflow
 
 site_url: flumoh.github.io
-display_url: flumoh.github.io
+# display_url: flumoh.github.io
 logo_url: https://tokens.dougrich.net/api/token/HdzzA-XnpQ.svg
 show_preview_links: false
 search: false
