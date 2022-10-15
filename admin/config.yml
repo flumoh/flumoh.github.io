@@ -17,3 +17,19 @@ collections:
       - {label: "Publish Date", name: "date", widget: "datetime"}
       - {label: "Tags", name: "tags", widget: "list"}
       - {label: "Body", name: "body", widget: "markdown"}
+  - name: "potion-aa"
+    label: "Alchemy Almanac Potion"
+    folder: "_potions-aa/"
+    create: true
+    slug: "{{slug}}-aa"
+    fields:
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Category", name: "category", widget: "string"}
+      - {label: "Rarity", name: "rarity", widget: "select", options:
+        - { label: "Common", value: "common" }
+        - { label: "Uncommon", value: "uncommon" }
+        - { label: "Rare", value: "rare" }
+        - { label: "Very Rare", value: "very-rare" }
+        - { label: "Legendary", value: "legendary" }
+        }
+      - {label: "Description", name: "description", widget: "markdown"}
