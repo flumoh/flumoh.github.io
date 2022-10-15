@@ -22,14 +22,15 @@ collections:
     folder: "_potions-aa/"
     create: true
     slug: "{{slug}}-aa"
+    identifier_field: name
     fields:
-      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Name", name: "name", widget: "string"}
       - {label: "Category", name: "category", widget: "string"}
       - {label: "Rarity", name: "rarity", widget: "select", options:
-        - { label: "Common", value: "common" }
-        - { label: "Uncommon", value: "uncommon" }
-        - { label: "Rare", value: "rare" }
-        - { label: "Very Rare", value: "very-rare" }
-        - { label: "Legendary", value: "legendary" }
+        - {label: "Common", value: "common"}
+        - {label: "Uncommon", value: "uncommon"}
+        - {label: "Rare", value: "rare"}
+        - {label: "Very Rare", value: "very-rare"}
+        - {label: "Legendary", value: "legendary"}
         }
       - {label: "Description", name: "description", widget: "markdown"}
