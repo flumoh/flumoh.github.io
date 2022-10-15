@@ -20,22 +20,37 @@ slug:
   sanitize_replacement: "_"
 
 collections:
-  - name: "blog" # Used in routes, e.g., /admin/collections/blog
-    label: "Blog" # Used in the UI
-    folder: "posts/" # The path to the folder where the documents are stored
+  - name: "post" # Used in routes, e.g., /admin/collections/blog
+    label: "Post" # Used in the UI
+    folder: "_posts/" # The path to the folder where the documents are stored
     create: true # Allow users to create new documents in this collection
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
     fields: # The fields for each document, usually in front matter
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Publish Date", name: "date", widget: "datetime"}
+      - {label: "Kategory", name: "categories", widget: "string"}
       - {label: "Tags", name: "tags", widget: "list"}
       - {label: "Body", name: "body", widget: "markdown"}
+      - {name: "permalink", value: "/{{year}}/{{month}}/{{day}}/{{slug}}/"}
+
+  - name: "site" # Used in routes, e.g., /admin/collections/blog
+    label: "Site" # Used in the UI
+    folder: "_site/" # The path to the folder where the documents are stored
+    create: true # Allow users to create new documents in this collection
+    slug: "{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
+    fields: # The fields for each document, usually in front matter
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Publish Date", name: "date", widget: "datetime"}
+      - {label: "Kategory", name: "categories", widget: "string"}
+      - {label: "Tags", name: "tags", widget: "list"}
+      - {label: "Body", name: "body", widget: "markdown"}
+      - {name: "permalink", value: "/{{slug}}/"}
+
+    
   - name: "potion-aa"
     label: "Alchemy Almanac Potion"
     folder: "content/_potions-aa/"
     create: true
-    extension: json
-    format: json
     slug: "{{slug}}-aa"
     identifier_field: name
     fields:
