@@ -34,8 +34,8 @@ collections:
     label: "Alchemy Almanac Potion"
     folder: "content/_potions-aa/"
     create: true
-    extension: html
-    format: html
+    extension: json
+    format: json
     slug: "{{slug}}-aa"
     identifier_field: name
     fields:
