@@ -31,6 +31,7 @@ collections:
       - label: "Data"
         name: "data"
         widget: "list"
+        allow_add: true
         fields:
           - {label: "Name", name: "name", widget: "string"}
           - {Label: "Path", name: "path", widget: "string"}
