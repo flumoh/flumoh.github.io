@@ -1,7 +1,7 @@
 category:
-  - name: Equipment
+  - title: Equipment
     path: /equipment/
     desc: A﻿lle Equipment, wearbles und trade goods belong to this category.
-  - name: Default
+  - title: Default
     path: /
     desc: T﻿his Category is choosen by default.
