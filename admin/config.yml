@@ -33,7 +33,7 @@ collections:
             allow_add: true
             add_to_top: true
             fields:
-              - {label: "Name", name: "name", widget: "string"}
+              - {label: "Name", name: "title", widget: "string"}
               - {Label: "Path", name: "path", widget: "string"}
               - {label: "Description", name: "desc", widget: "markdown"}
       - label: "Tags"
@@ -64,8 +64,8 @@ collections:
         widget: "relation"
         collection: "metadata"
         file: "categories"
-        value_field: "categories.*.name"
-        search_fields: ["categories.*.name", "categories.*.path"]
+        value_field: "categories.*.title"
+        search_fields: ["categories.*.title", "categories.*.path"]
       - {label: "Tags", name: "tags", widget: "list"}
       - {label: "Body", name: "body", widget: "markdown"}
 
