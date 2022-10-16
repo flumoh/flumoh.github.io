@@ -29,10 +29,10 @@ collections:
     fields: 
       - label: "Data"
         name: "data"
-        widget: "list"
+        widget: "object"
         fields:
-        - {label: "Title", name: "title", widget: "string"}
-        - {Label: "Path", name: "path", widget: "string"}
+          - {label: "Title", name: "title", widget: "string"}
+          - {Label: "Path", name: "path", widget: "string"}
       - {label: "Description", name: "desc", widget: "markdown"}
   - name: "tag"
     label: "Tag"
