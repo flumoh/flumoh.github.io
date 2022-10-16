@@ -65,7 +65,7 @@ collections:
         collection: "metadata"
         file: "categories"
         value_field: "categories.*.name"
-        search_fields: "categories.*.name"
+        search_fields: ["categories.*.name"]
       - {label: "Tags", name: "tags", widget: "list"}
       - {label: "Body", name: "body", widget: "markdown"}
 
