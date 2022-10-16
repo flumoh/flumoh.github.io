@@ -33,6 +33,7 @@ collections:
         fields:
         - {label: "Title", name: "title", widget: "string"}
         - {Label: "Path", name: "path", widget: "string"}
+      - {label: "Description", name: "desc", widget: "markdown"}
   - name: "tag"
     label: "Tag"
     folder: "_data/"
@@ -40,8 +41,8 @@ collections:
     slug: "tag-{{slug}}"
     filter: {name: "type", value: "tag"}
     fields: 
-        - {label: "Title", name: "title", widget: "string"}
-        - {Label: "Color", name: "color", widget: "string"}
+      - {label: "Title", name: "title", widget: "string"}
+      - {Label: "Color", name: "color", widget: "color"}
       
   - name: "post" # Used in routes, e.g., /admin/collections/blog
     label: "Post" # Used in the UI
