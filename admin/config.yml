@@ -27,11 +27,12 @@ collections:
     slug: "cat-{{slug}}"
     filter: {name: "type", value: "category"}
     fields: 
+      - {label: "Title", name: "title", widget: "string"}
       - label: "Data"
         name: "data"
-        widget: "object"
+        widget: "list"
         fields:
-          - {label: "Title", name: "title", widget: "string"}
+          - {label: "Name", name: "name", widget: "string"}
           - {Label: "Path", name: "path", widget: "string"}
       - {label: "Description", name: "desc", widget: "markdown"}
   - name: "tag"
