@@ -20,31 +20,35 @@ slug:
   sanitize_replacement: "_"
 
 collections:
-  - name: "categories"
-    label: "Categories"
-    folder: "_data/"
-    create: true
-    slug: "cat-{{slug}}"
-    filter: {name: "type", value: "category"}
-    fields: 
-      - {label: "Title", name: "title", widget: "string"}
-      - label: "Data"
-        name: "data"
-        widget: "list"
-        allow_add: true
+  - label: "Metadata"
+    name: "metadata"
+    files:
+      - label: "Categories" 
+        name: "categories"
+        file: "_data/categories.md"
+        fields: 
+          - label: "Category"
+            name: "category"
+            widget: "list"
+            allow_add: true
+            add_to_top: true
+            fields:
+              - {label: "Name", name: "name", widget: "string"}
+              - {Label: "Path", name: "path", widget: "string"}
+              - {label: "Description", name: "desc", widget: "markdown"}
+      - label: "Tags"
+        name: "tags"
+        file: "_data/tags.md"
         fields:
-          - {label: "Name", name: "name", widget: "string"}
-          - {Label: "Path", name: "path", widget: "string"}
-      - {label: "Description", name: "desc", widget: "markdown"}
-  - name: "tag"
-    label: "Tag"
-    folder: "_data/"
-    create: true
-    slug: "tag-{{slug}}"
-    filter: {name: "type", value: "tag"}
-    fields: 
-      - {label: "Title", name: "title", widget: "string"}
-      - {Label: "Color", name: "color", widget: "color"}
+          - label: "Tag"
+            name: "tag"
+            widget: "list"
+            allow_add: true
+            add_to_top: true
+            fields:
+              - {label: "Title", name: "title", widget: "string"}
+              - {Label: "Color", name: "color", widget: "color"}
+              - {label: "Description", name: "desc", widget: "markdown"}
       
   - name: "post" # Used in routes, e.g., /admin/collections/blog
     label: "Post" # Used in the UI
@@ -58,9 +62,9 @@ collections:
       - label: "Category"
         name: "category"
         widget: "relation"
-        collection: "categories"
-        value_field: "data.*"
-        search_fields: ["data.title", "data.path"]
+        collection: "metadata.categories"
+        value_field: "category.*"
+        search_fields: ["category.name", "category.path"]
       - {label: "Tags", name: "tags", widget: "list"}
       - {label: "Body", name: "body", widget: "markdown"}
 
