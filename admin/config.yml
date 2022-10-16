@@ -64,7 +64,7 @@ collections:
         widget: "relation"
         collection: "categories"
         value_field: "category.*"
-        search_fields: ["category.name", "category.path"]
+        search_fields: "category.name"
       - {label: "Tags", name: "tags", widget: "list"}
       - {label: "Body", name: "body", widget: "markdown"}
 
