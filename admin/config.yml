@@ -40,8 +40,8 @@ collections:
         name: "tags"
         file: "_data/tags.yml"
         fields:
-          - label: "Tag"
-            name: "tag"
+          - label: "Tags"
+            name: "tags"
             widget: "list"
             allow_add: true
             add_to_top: true
@@ -54,7 +54,7 @@ collections:
     label: "Post" # Used in the UI
     folder: "_posts/" # The path to the folder where the documents are stored
     create: true # Allow users to create new documents in this collection
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
+    slug: "{{categories.*.path}}{{year}}-{{month}}-{{day}}-{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
     filter: {name: "permalink", value: "/:categories/:year/:month/:day/:title:output_ext"}
     fields: # The fields for each document, usually in front matter
       - {label: "Title", name: "title", widget: "string"}
