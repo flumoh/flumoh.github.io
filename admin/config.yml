@@ -20,22 +20,28 @@ slug:
   sanitize_replacement: "_"
 
 collections:
-  - name: "data"
-    label: "Data"
-    widget: "hidden"
-    files: 
-      - label: "Categories"
-        name: "categories"
-        file: "_data/categories.md"
+  - name: "categories"
+    label: "Categories"
+    folder: "_data/"
+    create: true
+    slug: "cat-{{slug}}"
+    filter: {name: "type", value: "category"}
+    fields: 
+      - label: "Data"
+        name: "data"
+        widget: "list"
         fields:
-          - {label: "Title", name: "title", widget: "string"}
-          - {Label: "Path", name: "path", widget: "string"}
-      - label: "Tags"
-        name: "tags"
-        file: "_data/tags.md"
-        fields:
-          - {label: "Title", name: "title", widget: "string"}
-          - {Label: "Color", name: "color", widget: "string"}
+        - {label: "Title", name: "title", widget: "string"}
+        - {Label: "Path", name: "path", widget: "string"}
+  - name: "tag"
+    label: "Tag"
+    folder: "_data/"
+    create: true
+    slug: "tag-{{slug}}"
+    filter: {name: "type", value: "tag"}
+    fields: 
+        - {label: "Title", name: "title", widget: "string"}
+        - {Label: "Color", name: "color", widget: "string"}
       
   - name: "post" # Used in routes, e.g., /admin/collections/blog
     label: "Post" # Used in the UI
@@ -46,7 +52,12 @@ collections:
     fields: # The fields for each document, usually in front matter
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Publish Date", name: "date", widget: "datetime"}
-      - {label: "Kategory", name: "categories", widget: "list"}
+      - label: "Category"
+        name: "category"
+        widget: "relation"
+        collection: "categories"
+        value_field: "data.*"
+        search_field: ["data.title", "data.path"]
       - {label: "Tags", name: "tags", widget: "list"}
       - {label: "Body", name: "body", widget: "markdown"}
 
