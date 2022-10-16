@@ -57,7 +57,7 @@ collections:
         widget: "relation"
         collection: "categories"
         value_field: "data.*"
-        search_field: ["data.title", "data.path"]
+        search_fields: ["data.title", "data.path"]
       - {label: "Tags", name: "tags", widget: "list"}
       - {label: "Body", name: "body", widget: "markdown"}
 
