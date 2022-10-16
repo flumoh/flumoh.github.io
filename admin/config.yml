@@ -25,7 +25,7 @@ collections:
     files:
       - label: "Categories" 
         name: "categories"
-        file: "_data/categories.md"
+        file: "_data/categories.yml"
         fields: 
           - label: "Category"
             name: "category"
@@ -38,7 +38,7 @@ collections:
               - {label: "Description", name: "desc", widget: "markdown"}
       - label: "Tags"
         name: "tags"
-        file: "_data/tags.md"
+        file: "_data/tags.yml"
         fields:
           - label: "Tag"
             name: "tag"
